@@ -16,6 +16,7 @@ public class Calculator {
             System.out.println("4.Division");
             System.out.println("5.Square");
             System.out.println("6.Square Root");
+            System.out.println("7.Factorial");
             System.out.println("10. Exit");
             System.out.println("Please Enter your choice: ");
 
@@ -40,6 +41,10 @@ public class Calculator {
                 case 6:
                     squareRoot(sc);
                     break;
+                case 7:
+                    factorial(sc);
+                    break;
+
             }
         }
         while(choice != 10);
@@ -88,5 +93,15 @@ public class Calculator {
             System.out.println("Enter a number");
             double a = sc.nextDouble();
             System.out.println(Math.sqrt(a));;
+        }
+
+        private static void factorial(Scanner sc){
+            System.out.print("Give a number:");
+            int userInput = sc.nextInt();
+            int factorial = 1;
+            for (int i = 1; i <= userInput ; i++) {
+                factorial *= i;
+            }
+            System.out.println("Factorial: " + factorial);
         }
 }
