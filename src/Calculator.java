@@ -17,6 +17,7 @@ public class Calculator {
             System.out.println("5.Square");
             System.out.println("6.Square Root");
             System.out.println("7.Factorial");
+            System.out.println("8.Greatest of 3 numbers");
             System.out.println("10. Exit");
             System.out.println("Please Enter your choice: ");
 
@@ -44,7 +45,9 @@ public class Calculator {
                 case 7:
                     factorial(sc);
                     break;
-
+                case 8:
+                    greatest(sc);
+                    break;
             }
         }
         while(choice != 10);
@@ -104,4 +107,13 @@ public class Calculator {
             }
             System.out.println("Factorial: " + factorial);
         }
+
+        private static void greatest(Scanner sc) {
+            System.out.println("Enter numbers");
+            int number1 = sc.nextInt();
+            int number2 = sc.nextInt();
+            int number3 = sc.nextInt();
+            System.out.println(Math.max(number1, Math.max(number2,number3)));
+
+    }
 }
